@@ -1,0 +1,196 @@
+\documentclass[11pt]{article}
+\usepackage[sfdefault,semibold,lf]{FiraSans}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{141E61}
+\newcommand{\linkicon}{
+  \color{gray}{\footnotesize\raisebox{1pt}{\faIcon{external-link-alt}}}
+}
+\setcounter{secnumdepth}{0}
+\pdfgentounicode=1
+%====== LIST FORMATTING ======
+\usepackage{enumitem}
+\setlist[itemize]{nosep, left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
+%====== TITLE FORMATTING ======
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\midrule}[1]{
+  \leavevmode
+  \xrfill[.5ex]{1pt}[accent]~\so{#1}~\xrfill[.5ex]{1pt}[accent]
+}
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*4}{*1}
+\titlespacing{\subsection}{0pt}{*3}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries\scshape}
+%====== CUSTOM COMMANDS ======
+\newcommand{\aux}[1]{
+  $|$ \space {\normalfont\itshape #1}%
+}
+\newcommand{\rside}[1]{
+  \hfill {\normalfont\color{accent} #1}%
+}
+%====== FOOTER ======
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+% Replace 'Star Rover' with your name in next line
+\fancyfoot[C]{\small\color{gray} Ali Rıza Kat -- Page \thepage\ of \pageref*{LastPage}}
+%====== DOCUMENT STARTS HERE ======
+\begin{document}
+%====== BANNER ======
+\begin{center}
+  \begin{tabularx}{\textwidth}{Xr}
+    % Left-aligned name and links
+    \begin{minipage}[c]{0.7\textwidth} % Center vertically
+      {\fontsize{36}{12} \fontseries{heavy}\selectfont \color{accent} ALI RIZA KAT} \\[0.5em]
+      \href{tel:+905516617781}{{\color{gray}{\faPhone}} +905516617781} \quad
+      \href{mailto:alirizakat.dev@gmail.com}{{\color{gray}{\faEnvelope}} alirizakat.dev@gmail.com} \quad
+      \faMapMarker \ {\color{gray} Istanbul} \\
+      \href{https://github.com/AliRKat}{{\color{gray}{\faGithub}} AliRKat} \quad
+      \href{https://www.linkedin.com/in/alirizakat}{{\color{gray}{\faLinkedin}} alirizakat}
+    \end{minipage} &
+    % Right-aligned photo
+    \begin{minipage}[c]{0.25\textwidth} % Center vertically
+      \centering
+      \vspace{-5mm} % Adjust vertical alignment of the image
+      \includegraphics[width=3cm, height=3cm, keepaspectratio]{photo.jpg} % Your photo path
+    \end{minipage}
+  \end{tabularx}
+\end{center}
+%====== BANNER END ======
+\section*{Özet}
+\begin{flushleft}
+Oyun ve yazılım geliştirme alanlarında uzmanlaşmış bir geliştiriciyim. 
+Milyonlarca kullanıcıya ulaşan projelerin geliştirilmesine liderlik ettim ve yazılım testi, hata ayıklama ile dokümantasyon yazımı konularında geniş bir deneyime sahibim.
+Oyun motorları, oyun geliştirme süreçleri ve tasarım konseptleri benim için büyük bir tutku. 
+Teknik bilgi birikimimi yaratıcı fikirlerle birleştirerek yüksek kaliteli projeler hayata geçirmeye odaklanıyorum.
+\end{flushleft}
+%==========
+\section{Deneyim}
+\subsection{Countly \rside{Uzaktan}}
+\subsubsection{SDK Engineer \rside{Eylül 2023 -- Kasım 2024}}
+\begin{itemize}
+  \item Unity SDK'si için tüm zamanlarda en fazla kod geliştiren ve en geniş kapsamlı iyileştirmeleri gerçekleştiren kişi olarak görev aldım. WebGL desteği gibi önemli katkılarda bulundum.
+  \item \textbf{Unity, React Native, and Node.JS} platformları için SDK'lerin geliştirilmesinden ve ve güncel versiyonların piyasaya çıkartılmasından sorumlu kişiydim.
+  \item Müşteriler ve şirket içerisindeki diğer yazılımcılar için okunaklı ve anlaşılır dokümanlar hazırladım ve Countly'nin blogu için SDK'ler ile ilgili makaleler yazdım.
+  \item SDK'lerin her fonksiyonalitesi için Mocha ve NUnit ile test yazımında bulundum.
+\end{itemize}
+
+\subsection{Nitrogen Games \rside{Izmir, Turkey}}
+\subsubsection{Oyun Geliştirici \rside{Kasım 2022 -- Mayıs 2023}}
+\begin{itemize}
+  \item Birçok oyun prototipi ve tamamlanan projenin tek yazılımcısı olarak geliştirilmesinde görev aldım.
+  \item Şirket içi kullanılan oyun geliştirme araçlarının oluşturulmasına katkı sağladım.
+  \item Geliştirilen projelerin ve prototiplerin test ediminde ve hatalarının ayıklanmasında rol aldım.
+\end{itemize}
+
+\subsection{Nirah Games  \rside{Izmir, Turkey}}
+\subsubsection{Oyun Geliştirici \rside{Ocak 2021 -- Ekim 2022}}
+\begin{itemize}
+  \item Oyun prototipleri ve tamamlanan projelerin geliştirilmesinde yazılımcı olarak görev aldım, ve tüm yazılım süreçlerini üstlendim.
+  \item "Baby Life 3D!" adında \textbf{40 binden fazla inceleme ve milyonlarca indirme} almış bir projenin gelişiminde kilit bir rol üstlendim.
+  \item 2 seneye yakın bir süreçte, geliştirilen çoğu projenin baştan sona yazılımcısı olarak bulundum.
+\end{itemize}
+
+\subsection{Freelance \rside{Remote}}
+\subsubsection{Oyun Geliştirici \rside{Ocak 2020 -- Güncel}}
+\begin{itemize}
+  \item Farklı firmaların projelerine ve prototiplerine geliştirme desteğinde bulundum.
+  \item Projelerin mekaniklerinin implement edilmesi, hatalarının ayıklanması ve çözülmesi, kullanıcı arayüzünün istenildiği gibi oluşturulmasında katkı sağladım
+\end{itemize}
+%===============
+\section{Beceriler}
+\begin{description}
+   \item[Teknik] C\#, Node.js, React Native, JavaScript, C++, NUnit, WebGL, Mocha, SQL, Java, Kotlin
+  \item[Araçlar] Unity, Android Studio, XCode, Git, Unity Version Control, Zendesk
+  \item[Diller] İngilizce (Advanced)
+\end{description}
+%=======================
+%=======================
+\section{Projeler}
+\subsubsection{Baby Life 3D \aux{\href{https://apps.apple.com/us/app/baby-life-3d/id1577193350}{Link \linkicon}}}
+\begin{itemize}
+    \item Oyunun akışını optimize ederek, sezgisel bir kullanıcı arayüzü ve sorunsuz bir kullanıcı deneyimi sağladım.
+    \item Yüksek etkileşim ve oyuncu tutma oranını sağlamak amacıyla güncel mobil oyun trendlerini entegre ettim.
+\end{itemize}
+
+\subsubsection{Merge Invaders \aux{\href{https://apkcombo.com/merge-invaders/com.WorldnMore.MergeInvaders/}{Link \linkicon}}}
+\begin{itemize}
+    \item Oyunun temel döngüsüne yönelik merge mekaniğini geliştirdim ve uyguladım.
+    \item Büyük sahne nesnelerini yönetmek için oyun performansını optimize ederek gecikmeyi azalttım ve kare hızlarını iyileştirdim ve farklı cihazlar için belleği ve sahne yönetimini optimize etmeye odaklandım.
+\end{itemize}
+
+\subsubsection{Island Explorer 3D \aux{\href{https://www.taptap.io/app/33559961}{Link \linkicon}}}
+\begin{itemize}
+    \item Yükseltmeler, oyun içi satın alımlar, kayıt sistemi ve dövüş mekanikleri gibi temel oyun mekaniklerini uyguladım.
+    \item Etkileşimli ortamlar ve kaynak yönetimi özelliklerini entegre etmeye odaklandım.
+\end{itemize}
+
+\subsubsection{AniMayhem \aux{\href{https://www.appbrain.com/appstore/animayhem/ios-1579526762}{Link \linkicon}}}
+\begin{itemize}
+    \item Gerçekçi futbol ağı dinamikleri için özel bir kumaş simülasyonu kullanarak oyun içi fiziği optimize ettim.
+    \item Çarpışma algılama ve fizik etkileşimlerini daha iyi performans ve görsel doğruluk için ayarladım.
+\end{itemize}
+
+\subsubsection{Party Queen \aux{\href{https://skich.app/games/party-queen}{Link \linkicon}}}
+\begin{itemize}
+    \item Oyuncu etkileşimini ve görsel çekiciliği artıran animasyonlar entegre ettim.
+    \item Oyunun çeşitli cihazlarda sorunsuz çalışmasını ve geniş bir kitleye erişilebilir olmasını sağlamak için optimizasyon yaptım.
+\end{itemize}
+
+\subsubsection{Guess The Place \aux{\href{https://skich.app/games/guess-the-place}{Link \linkicon}}}
+\begin{itemize}
+    \item Kültürel ve coğrafi bilgiye dayalı bir trivia mekaniği tasarlayıp uyguladım.
+    \item Oyuncu etkileşimini artırmak için sezgisel bir kullanıcı arayüzü ve kullanıcı deneyimi geliştirdim.
+\end{itemize}
+
+\subsubsection{Crazy In Love \aux{\href{https://skich.app/games/crazy-in-love}{Link \linkicon}}}
+\begin{itemize}
+    \item Yeniden oynanabilirliği artırmak için dinamik, hikaye tabanlı oynanış ve dallanan hikaye hatları geliştirdim.
+    \item Oyuncu beklentilerine ve trendlere uygun oyun mekaniklerini detaylı bir şekilde iyileştirmeye odaklandım.
+\end{itemize}
+
+\subsubsection{City.io \aux{\href{https://skich.app/games/cityio}{Link \linkicon}}}
+\begin{itemize}
+    \item Gerçek zamanlı olarak oyuncuyla rekabet edebilen mantıklı ve aktif bir rakip oynanışı sağlayan durum tabanlı bir düşman yapay zeka sistemi geliştirdim.
+    \item Kullanıcı memnuniyetini artıran ve dinamik görsel geri bildirim sağlayan görsel olarak çekici para toplama ve istifleme sistemi ile kaynak yönetimi mekaniklerini uyguladım.
+\end{itemize}
+%=======================
+\section{Yayinlar}
+\subsubsection{Countly SDK Development Updates: What's New and Improved \aux{\href{https://countly.com/blog/countly-sdk-development-updates-what-s-new-and-improved}{Link \linkicon}}}
+\begin{itemize}
+    \item Countly'nin SDK geliştirmeleri hakkında yapılan son güncellemeleri ve iyileştirmeleri kapsayan, geliştiricilerin yeni özellikleri anlamalarına ve bunları nasıl kullanabileceklerine yardımcı olmayı amaçlayan detaylı bir yazı yazdım. \\
+\end{itemize}
+\subsubsection{Unleashing the Unique Power of Countly's Desktop SDKs \aux{\href{https://countly.com/blog/unleashing-the-unique-power-of-countlys-desktop-sdks}{Link \linkicon}}}
+\begin{itemize}
+    \item Geliştiricilerin masaüstü uygulamalarına analiz entegrasyonu yaparken kullanabilecekleri, Countly'nin masaüstü SDK'larının benzersiz özelliklerini ve avantajlarını inceleyen bir makale yazdım. \\
+\end{itemize}
+%=======================
+\section{Egitim}
+\subsection{Yaşar Üniversitesi \rside{Izmir, Türkiye}}
+\begin{itemize}
+    \item{İşletme \rside{Mezuniyet: 2021}}
+\end{itemize}
+%=======================
+\section{Ilgi Alanlarim}
+\begin{itemize}
+    \item \textbf{Dövüş Sporları:} Brazilian Jiu Jitsu, Taekwondo Siyah Kemer, Wing Chun 1.TG Eğitmen, 
+    \item \textbf{Oyun:} Hayatım boyunca Satranç ve Magic: the Gathering oynadım. Aynı zamanda retro oyunlara ve konsollara büyük bir tutkum var, bu platformlar için hobi olarak oyun geliştiriyorum. 
+    \item \textbf{Dungeons \& Dragons:} Hikaye yazımı ve anlatımı konusunda büyük bir ilgim var.
+    \item \textbf{Koşu:} Mümkün olduğu sürece senede en azından bir maraton koşusuna katılmaya çalışıyorum.
+\end{itemize}
+%=======================
+\end{document}
