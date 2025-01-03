@@ -1,0 +1,204 @@
+\documentclass[11pt]{article}
+\usepackage[sfdefault,semibold,lf]{FiraSans}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{141E61}
+\newcommand{\linkicon}{
+  \color{gray}{\footnotesize\raisebox{1pt}{\faIcon{external-link-alt}}}
+}
+\setcounter{secnumdepth}{0}
+\pdfgentounicode=1
+%====== LIST FORMATTING ======
+\usepackage{enumitem}
+\setlist[itemize]{nosep, left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
+%====== TITLE FORMATTING ======
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\midrule}[1]{
+  \leavevmode
+  \xrfill[.5ex]{1pt}[accent]~\so{#1}~\xrfill[.5ex]{1pt}[accent]
+}
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*4}{*1}
+\titlespacing{\subsection}{0pt}{*3}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries\scshape}
+%====== CUSTOM COMMANDS ======
+\newcommand{\aux}[1]{
+  $|$ \space {\normalfont\itshape #1}%
+}
+\newcommand{\rside}[1]{
+  \hfill {\normalfont\color{accent} #1}%
+}
+%====== FOOTER ======
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+% Replace 'Star Rover' with your name in next line
+\fancyfoot[C]{\small\color{gray} Ali Rıza Kat -- Page \thepage\ of \pageref*{LastPage}}
+
+% \pagestyle{empty} 
+% uncomment previous line to hide page numbering
+%====== PACKAGES ======
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+%====== FINISH PREAMBLE ======
+%====== DOCUMENT STARTS HERE ======
+\begin{document}
+%====== BANNER ======
+\begin{center}
+  \begin{tabularx}{\textwidth}{Xr}
+    % Left-aligned name and links
+    \begin{minipage}[c]{0.7\textwidth} % Center vertically
+      {\fontsize{36}{12} \fontseries{heavy}\selectfont \color{accent} ALI RIZA KAT} \\[0.5em]
+      \href{tel:+905516617781}{{\color{gray}{\faPhone}} +905516617781} \quad
+      \href{mailto:alirizakat.dev@gmail.com}{{\color{gray}{\faEnvelope}} alirizakat.dev@gmail.com} \quad
+      \faMapMarker \ {\color{gray} Istanbul} \\
+      \href{https://github.com/AliRKat}{{\color{gray}{\faGithub}} AliRKat} \quad
+      \href{https://www.linkedin.com/in/alirizakat}{{\color{gray}{\faLinkedin}} alirizakat}
+    \end{minipage} &
+    % Right-aligned photo
+    \begin{minipage}[c]{0.25\textwidth} % Center vertically
+      \centering
+      \vspace{-5mm} % Adjust vertical alignment of the image
+      \includegraphics[width=3cm, height=3cm, keepaspectratio]{photo.jpg} % Your photo path
+    \end{minipage}
+  \end{tabularx}
+\end{center}
+%====== BANNER END ======
+\section{Technical Summary}
+\begin{flushleft}
+Software and Game Developer with strong expertise in Unity, SDK development, and optimization. Proven track record of leading projects that reached millions of users. Experienced with unit testing, debugging, and user interface design. Passionate about emerging technologies like blockchain, and skilled in combining creative design with technical implementation to deliver high-quality gaming experiences.
+\end{flushleft}
+%==========
+\section{Experience}
+\subsection{Countly \rside{Remote}}
+\subsubsection{SDK Engineer \rside{Sep 2023 -- Nov 2024}}
+\begin{itemize}
+  \item Led contributions to the Unity SDK, adding WebGL support and new features.
+  \item Participated as the \textbf{sole maintainer of Unity, React Native, and Node.js SDKs}, delivered high quality releases and improved functionality. 
+  \item Created clear, well-structed documentation for developers and customers.
+  \item Authored technical SDK-related articles for Countly's blog, sharing best practices, use cases, and SDK updates.
+  \item Added unit and integration tests for Node.js and Unity SDKs using Mocha and NUnit.
+\end{itemize}
+
+\subsection{Nitrogen Games \rside{Izmir, Turkey}}
+\subsubsection{Game Developer \rside{Nov 2022 -- May 2023}}
+\begin{itemize}
+  \item Developed and completed multiple mobile game prototypes and projects.
+  \item Contributed to the creation of internal development tools.
+  \item Participated in game design meetings, providing development insights.
+  \item Tested and reviewed prototypes weekly, assisting in bug fixes.
+\end{itemize}
+
+\subsection{Nirah Games  \rside{Izmir, Turkey}}
+\subsubsection{Game Developer \rside{Jan 2021 -- Oct 2022}}
+\begin{itemize}
+  \item Developed multiple prototypes and completed full game projects.
+  \item Played a pivotal role in designing and developing the game "Baby Life 3D!", a remarkable success that achieved \textbf{millions of downloads and garnered over 40K reviews.}
+  \item Released several other fully completed projects.
+\end{itemize}
+
+\subsection{Freelance \rside{Remote}}
+\subsubsection{Game Developer \rside{Jan 2020 -- Present}}
+\begin{itemize}
+  \item Worked on several game prototypes and full projects across multiple genres, from concept to completion.
+  \item Contributed to projects on a freelance basis, including game mechanics design, UI implementation, and troubleshooting.
+\end{itemize}
+%===============
+\section{Skills}
+\begin{description}
+   \item[Technical] C\#, Node.js, React Native, JavaScript, C++, NUnit, WebGL, Mocha, SQL, Java, Kotlin
+  \item[Tools] Unity, Android Studio, XCode, Git, Unity Version Control, Zendesk
+  \item[Language] English (Advanced), Turkish (Native)
+\end{description}
+%=======================
+\section{Projects}
+\subsubsection{Baby Life 3D \aux{\href{https://apps.apple.com/us/app/baby-life-3d/id1577193350}{Link \linkicon}}}
+\begin{itemize}
+  \item Optimized the game flow, focusing on intuitive UI and seamless user experience.
+  \item Integrated current mobile game trends to ensure high engagement and retention.
+\end{itemize}
+
+\subsubsection{Merge Invaders \aux{\href{https://apkcombo.com/merge-invaders/com.WorldnMore.MergeInvaders/}{Link \linkicon}}}
+\begin{itemize}
+  \item Developed and implemented a merge mechanic central to the game’s core loop.
+  \item Optimized game performance for handling large numbers of in-scene objects, reducing lag and improving frame rates.
+  \item Focused on memory and scene management to optimize for various devices.
+\end{itemize}
+
+\subsubsection{Island Explorer 3D \aux{\href{https://www.taptap.io/app/33559961}{Link \linkicon}}}
+\begin{itemize}
+  \item Implemented core gameplay mechanics: upgrades, in-game purchases, saving, and combat systems.
+  \item Developed dynamic progression systems to enhance player engagement and retention.
+  \item Focused on integrating interactive environments and resource management features.
+\end{itemize}
+
+\subsubsection{AniMayhem \aux{\href{https://www.appbrain.com/appstore/animayhem/ios-1579526762}{Link \linkicon}}}
+\begin{itemize}
+  \item Optimized in-game physics, specifically using a cloth simulation asset for realistic football net dynamics.
+  \item Enhanced the realism of cloth behavior and interactions using advanced physics engines.
+  \item Tuned collision detection and physics interactions for improved performance and visual fidelity.
+\end{itemize}
+
+\subsubsection{Party Queen \aux{\href{https://skich.app/games/party-queen}{Link \linkicon}}}
+\begin{itemize}
+  \item Integrated unique and engaging animations, enhancing player immersion and visual appeal.
+  \item Optimized the game for various devices, ensuring smooth performance and accessibility for a wide audience.
+\end{itemize}
+
+\subsubsection{Guess The Place \aux{\href{https://skich.app/games/guess-the-place}{Link \linkicon}}}
+\begin{itemize}
+  \item Designed and implemented trivia mechanics centered on cultural and geographical knowledge.
+  \item Developed an intuitive UI/UX, simplifying player interaction and increasing engagement.
+\end{itemize}
+
+\subsubsection{Crazy In Love \aux{\href{https://skich.app/games/crazy-in-love}{Link \linkicon}}}
+\begin{itemize}
+  \item Developed dynamic narrative-based gameplay, and branching storylines for replayability.
+  \item Integrated smooth animations to improve the overall visual experience.
+  \item Focused on polishing game mechanics to align with player expectations and trends.
+\end{itemize}
+
+\subsubsection{City.io \aux{\href{https://skich.app/games/cityio}{Link \linkicon}}}
+\begin{itemize}
+  \item Developed a state-based enemy AI system, enabling opponents to play logically and actively compete against the player in real time.
+  \item Implemented a visually engaging money-gathering and stacking system and resource management mechanics, enhancing user satisfaction with dynamic visual feedback.
+\end{itemize}
+%=======================
+\section{Publications}
+\subsubsection{Countly SDK Development Updates: What's New and Improved \aux{\href{https://countly.com/blog/countly-sdk-development-updates-what-s-new-and-improved}{Link \linkicon}}}
+\begin{itemize}
+\item Authored a detailed post on Countly's SDK development, covering recent updates and improvements to the SDK, aimed at helping developers understand new features and how to leverage them. \\
+\end{itemize}
+\subsubsection{Unleashing the Unique Power of Countly's Desktop SDKs \aux{\href{https://countly.com/blog/unleashing-the-unique-power-of-countlys-desktop-sdks}{Link \linkicon}}}
+\begin{itemize}
+\item Wrote an article exploring the capabilities and advantages of Countly's desktop SDKs, with a focus on their unique features and use cases for developers integrating analytics into desktop applications. \\
+\end{itemize}
+%=======================
+\section{Education}
+\subsection{Yaşar University \rside{Izmir, Turkey}}
+\begin{itemize}
+    \item{Bachelor of Business Administration \rside{Graduated: 2021}}
+\end{itemize}
+%=======================
+\section{Interests}
+\begin{itemize}
+    \item \textbf{Martial Arts:} Brazilian Jiu Jitsu, Black Belt in Taekwondo, 1.TG Wing Chun
+    \item \textbf{Gaming:} Lifelong Chess and Magic: the Gathering player, and also interested in exploring mechanics and design in various genres of video games.
+    \item \textbf{Dungeons \& Dragons:} Enthusiastic about storytelling, world-building, and leading campaigns as a Dungeon Master.
+    \item \textbf{Running:} Consistently run at least one marathon each year, depending on availability, to stay physically and mentally fit.
+\end{itemize}
+%=======================
+\end{document}
