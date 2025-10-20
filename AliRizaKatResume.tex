@@ -4,168 +4,175 @@
 \usepackage{xcolor}
 \definecolor{accent}{HTML}{141E61}
 \newcommand{\linkicon}{
-  \color{gray}{\footnotesize\raisebox{1pt}{\faIcon{external-link-alt}}}
-}
-\setcounter{secnumdepth}{0}
-\pdfgentounicode=1
-%====== LIST FORMATTING ======
-\usepackage{enumitem}
-\setlist[itemize]{nosep, left=0pt .. 1.5em}
-\setlist[enumerate]{left=0pt..1.5em}
-\setlist[description]{itemsep=0pt}
-%====== TITLE FORMATTING ======
-\usepackage{xhfill}
-\usepackage{soul}
-\newcommand{\midrule}[1]{
-  \leavevmode
-  \xrfill[.5ex]{1pt}[accent]~\so{#1}~\xrfill[.5ex]{1pt}[accent]
-}
-\usepackage{titlesec}
-\titlespacing{\section}{0pt}{*4}{*1}
-\titlespacing{\subsection}{0pt}{*3}{*0}
-\titlespacing{\subsubsection}{0pt}{*0}{*0}
-\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
-\titleformat*{\subsection}{\large\bfseries\scshape}
-%====== CUSTOM COMMANDS ======
-\newcommand{\aux}[1]{
-  $|$ \space {\normalfont\itshape #1}%
-}
-\newcommand{\rside}[1]{
-  \hfill {\normalfont\color{accent} #1}%
-}
-%====== FOOTER ======
-\usepackage{lastpage}
-\usepackage{fancyhdr}
-\usepackage{xcolor}
-\usepackage{fontawesome5}
-\usepackage{tabularx}
-\usepackage{graphicx}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
+      \color{gray}{\footnotesize\raisebox{1pt}{\faIcon{external-link-alt}}}
+  }
+  \setcounter{secnumdepth}{0}
+  \pdfgentounicode=1
+  %====== LIST FORMATTING ======
+  \usepackage{enumitem}
+  \setlist[itemize]{nosep, left=0pt .. 1.5em}
+  \setlist[enumerate]{left=0pt..1.5em}
+  \setlist[description]{itemsep=0pt}
+  %====== TITLE FORMATTING ======
+  \usepackage{xhfill}
+  \usepackage{soul}
+  \newcommand{\midrule}[1]{
+        \leavevmode
+          \xrfill[.5ex]{1pt}[accent]~\so{#1}~\xrfill[.5ex]{1pt}[accent]
+      }
+      \usepackage{titlesec}
+      \titlespacing{\section}{0pt}{*4}{*1}
+      \titlespacing{\subsection}{0pt}{*3}{*0}
+      \titlespacing{\subsubsection}{0pt}{*0}{*0}
+      \titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+      \titleformat*{\subsection}{\large\bfseries\scshape}
+      %====== CUSTOM COMMANDS ======
+      \newcommand{\aux}[1]{
+            $|$ \space {\normalfont\itshape #1}%
+        }
+        \newcommand{\rside}[1]{
+              \hfill {\normalfont\color{accent} #1}%
+          }
+          %====== FOOTER ======
+          \usepackage{lastpage}
+          \usepackage{fancyhdr}
+          \usepackage{xcolor}
+          \usepackage{fontawesome5}
+          \usepackage{tabularx}
+          \usepackage{graphicx}
+          \pagestyle{fancy}
+          \fancyhf{}
+          \renewcommand{\headrulewidth}{0pt}
 
-% Replace 'Star Rover' with your name in next line
-\fancyfoot[C]{\small\color{gray} Ali Rıza Kat -- Page \thepage\ of \pageref*{LastPage}}
+          % Replace 'Star Rover' with your name in next line
+          \fancyfoot[C]{\small\color{gray} Ali Rıza Kat -- Page \thepage\ of \pageref*{LastPage}}
 
-% \pagestyle{empty} 
-% uncomment previous line to hide page numbering
-%====== PACKAGES ======
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage[bookmarks=false,hidelinks]{hyperref}
-%====== FINISH PREAMBLE ======
-%====== DOCUMENT STARTS HERE ======
-\begin{document}
-%====== BANNER ======
-\begin{center}
-  \begin{tabularx}{\textwidth}{Xr}
-    % Left-aligned name and links
-    \begin{minipage}[c]{0.7\textwidth} % Center vertically
-      {\fontsize{36}{12} \fontseries{heavy}\selectfont \color{accent} ALI RIZA KAT} \\[0.5em]
-      \href{tel:+905516617781}{{\color{gray}{\faPhone}} +905516617781} \quad
-      \href{mailto:alirizakat.dev@gmail.com}{{\color{gray}{\faEnvelope}} alirizakat.dev@gmail.com} \quad
-      \faMapMarker \ {\color{gray} Istanbul} \\
-      \href{https://github.com/AliRKat}{{\color{gray}{\faGithub}} AliRKat} \quad
-      \href{https://www.linkedin.com/in/alirizakat}{{\color{gray}{\faLinkedin}} alirizakat} \quad
-      \href{https://alirkat.github.io}{{\color{gray}{\faGlobe}} Website} \quad
-    \end{minipage} &
-    % Right-aligned photo
-    \begin{minipage}[c]{0.25\textwidth} % Center vertically
-      \centering
-      \vspace{-5mm} % Adjust vertical alignment of the image
-      \includegraphics[width=3cm, height=3cm, keepaspectratio]{photo.jpg} % Your photo path
-    \end{minipage}
-  \end{tabularx}
-\end{center}
-%====== BANNER END ======
-\section{Technical Summary}
-\begin{flushleft}
-Software and Game Developer with a strong background in Unity, SDK development, and optimization. Passionate about game engines, low-level systems, and performance tuning. Over 6 years of experience with  C\# and Unity, with deep expertise in Unity tool development. Professionally developed and released Unity, Node.js, and React Native SDKs. Contributed to the full-cycle development of numerous games, including a globally launched hit title.
-\end{flushleft}
-%==========
-\section{Skills} 
-    \begin{description} 
-        \item[Programming Languages] C\#, C++, JavaScript/TypeScript, Java
-        \item[Frameworks \& SDKs] Unity, Node.js, React Native, NUnit, Mocha
-        \item[Tools \& Platforms] Git, Unity Version Control (PlasticSCM), Android Studio, Xcode, Zendesk
-        \item[Language] English (C1), Turkish (Native) 
-    \end{description}
-%===============
-\section{Experience}
+          % \pagestyle{empty} 
+          % uncomment previous line to hide page numbering
+          %====== PACKAGES ======
+          \usepackage{fontawesome5}
+          \usepackage{multicol}
+          \usepackage[bookmarks=false,hidelinks]{hyperref}
+          %====== FINISH PREAMBLE ======
+          %====== DOCUMENT STARTS HERE ======
+          \begin{document}
+          %====== BANNER ======
+          \begin{center}
+                \begin{tabularx}{\textwidth}{Xr}
+                        % Left-aligned name and links
+                        \begin{minipage}[c]{0.7\textwidth} % Center vertically
+                                  {\fontsize{36}{12} \fontseries{heavy}\selectfont \color{accent} ALI RIZA KAT} \\[0.5em]
+                                        \href{tel:+905516617781}{{\color{gray}{\faPhone}} +905516617781} \quad
+                                              \href{mailto:alirizakat.dev@gmail.com}{{\color{gray}{\faEnvelope}} alirizakat.dev@gmail.com} \quad
+                                                    \faMapMarker \ {\color{gray} Istanbul} \\
+                                                          \href{https://github.com/AliRKat}{{\color{gray}{\faGithub}} AliRKat} \quad
+                                                                \href{https://www.linkedin.com/in/alirizakat}{{\color{gray}{\faLinkedin}} alirizakat} \quad
+                                                                      \href{https://alirkat.github.io}{{\color{gray}{\faGlobe}} Website} \quad
+                                                                          \end{minipage} &
+                                                                              % Right-aligned photo
+                                                                                  \begin{minipage}[c]{0.25\textwidth} % Center vertically
+                                                                                            \centering
+                                                                                                  \vspace{-5mm} % Adjust vertical alignment of the image
+                                                                                                        \includegraphics[width=3cm, height=3cm, keepaspectratio]{photo.jpg} % Your photo path
+                                                                                                            \end{minipage}
+                                                                                                              \end{tabularx}
+          \end{center}
+          %====== BANNER END ======
+          \section{Technical Summary}
+          \begin{flushleft}
+              Software and Game Developer with a strong background in Unity, SDK development, and optimization. Passionate about game engines, low-level systems, and performance tuning. Over 6 years of experience with  C\# and Unity, with deep expertise in software and tool development in Unity. Professionally developed and released Unity, Node.js, and React Native SDKs. Contributed to the full-cycle development of numerous games, including a globally launched hit title.
+          \end{flushleft}
+          %==========
+          \section{Skills}
+              \begin{description}
+                              \item[Programming Languages] C\#, C++, JavaScript/TypeScript, Java
+                                          \item[Frameworks \& SDKs] Unity, Node.js, React Native, NUnit, Mocha
+                                                      \item[Tools \& Platforms] Git, Linux, Unity Version Control, Android Studio, XCode, Zendesk
+                                                                  \item[Databases] PostgreSQL
+                                                                              \item[Languages] English (C1), Turkish (Native)
+                                                                                      \end{description}
+                                                                                      %===============
+                                                                                      \section{Experience}
 
-\subsection{Multiplayer / Super Duper Games \rside{Istanbul, Turkey}}
-\subsubsection{Software Engineer \rside{Feb 2025 -- Current}}
-\begin{itemize}
-  \item Developing up to \textbf{2 prototypes per month}.
-  \item Built over \textbf{10+ internal tools} (parsers, editor utilities) that \textbf{reduced design iteration time by 30\%} and \textbf{cut sheet parsing time by 50\%}.
-  \item Designed custom scenes and game levels for marketing videos and promotions.
-\end{itemize}
+                                                                                      \subsection{Multiplayer / Super Duper Games \rside{Istanbul, Turkey}}
+                                                                                      \subsubsection{Software Engineer \rside{Feb 2025 -- Oct 2025}}
+                                                                                      \begin{itemize}
+                                                                                                \item Developing, testing and preparing the release process of up to \textbf{2 prototypes per month}.
+                                                                                                      \item Built over \textbf{10+ internal tools} (parsers, editor utilities) that \textbf{reduced design iteration time by 30\%} and \textbf{cut sheet parsing time by 50\%}.
+                                                                                                            \item Developed a modular \textbf{Animation Library} system with editor tooling, and sequence management — enabling designers to build, preview, and chain complex UI/UX animations directly within the Editor.
+                                                                                      \end{itemize}
 
-\subsection{Countly \rside{Remote}}
-\subsubsection{SDK Engineer \rside{Sep 2023 -- Nov 2024}}
-\begin{itemize}
-  \item Added \textbf{WebGL build target support} and multiple new features to the Unity SDK.
-  \item Released \textbf{5 Unity SDKs}, \textbf{2 Node.js SDKs}, and \textbf{2 React Native SDKs} as the sole maintainer, ensuring stability and new functionality.
-  \item Rewrote and restructured over \textbf{15+ technical documents} on Zendesk, and authored \textbf{2 articles} sharing SDK best practices and updates.
-  \item Provided direct support for Unity, Node.js, and React Native SDKs, resolving numerous customer-reported issues.
-  \item Added unit and integration tests for Node.js and Unity SDKs using Mocha and NUnit.
-\end{itemize}
+                                                                                      \subsection{Countly \rside{Remote}}
+                                                                                      \subsubsection{SDK Engineer \rside{Sep 2023 -- Nov 2024}}
+                                                                                      \begin{itemize}
+                                                                                                \item As sole maintainer, conducted over \textbf{8+ releases} including Unity, Node.js, and React Native SDKs, ensuring stability and new functionality.
+                                                                                                      \item Added \textbf{WebGL build target support} and multiple new features to the Unity SDK.
+                                                                                                            \item Rewrote and restructured over \textbf{15+ technical documents} on Zendesk, and authored \textbf{2 articles} sharing SDK best practices and updates.
+                                                                                                                  \item Provided direct support for Unity, Node.js, and React Native SDKs, resolving numerous customer-reported issues.
+                                                                                                                        \item Added unit and integration tests for Node.js and Unity SDKs using Mocha and NUnit.
+                                                                                      \end{itemize}
 
-\subsection{Nitrogen Games \rside{Izmir, Turkey}}
-\subsubsection{Game Developer \rside{Nov 2022 -- May 2023}}
-\begin{itemize}
-  \item Completed the full-cycle development of \textbf{3 mobile games} in 7 months, including a hybrid-casual title.
-  \item Built \textbf{2 internal tools}, one focused on a new input system to improve gameplay workflows.
-  \item Took over \textbf{2 existing projects}, implementing input system upgrades and asset adjustments that enabled successful re-releases.
-\end{itemize}
+                                                                                      \subsection{Nitrogen Games \rside{Izmir, Turkey}}
+                                                                                      \subsubsection{Game Developer \rside{Nov 2022 -- May 2023}}
+                                                                                      \begin{itemize}
+                                                                                                \item Completed the full-cycle development of \textbf{3 mobile games} in 7 months, including a hybrid-casual title.
+                                                                                                      \item Built \textbf{2 internal tools}, one focused on a new input system to improve gameplay workflows.
+                                                                                                            \item Took over \textbf{2 existing projects}, implementing input system upgrades and asset adjustments that enabled successful re-releases.
+                                                                                      \end{itemize}
 
-\subsection{Nirah Games  \rside{Izmir, Turkey}}
-\subsubsection{Game Developer \rside{Jan 2021 -- Oct 2022}}
-\begin{itemize}
-  \item Led the development of \textbf{Baby Life 3D!}, a hit title with \textbf{1M+ downloads} and \textbf{20K+ reviews} on both Google Play and the App Store.
-  \item Contributed to the end-to-end development of \textbf{15+ prototypes}, iterating from concept to release.
-  \item Produced and optimized \textbf{2+ marketing videos per prototype}, achieving stable CPI and consistent user acquisition metrics.
-\end{itemize}
+                                                                                      \subsection{Nirah Games  \rside{Izmir, Turkey}}
+                                                                                      \subsubsection{Game Developer \rside{Jan 2021 -- Oct 2022}}
+                                                                                      \begin{itemize}
+                                                                                                \item Led the development of \textbf{Baby Life 3D!}, a hit title with \textbf{1M+ downloads} and \textbf{20K+ reviews} on both Google Play and the App Store.
+                                                                                                      \item Contributed to the end-to-end development of \textbf{15+ prototypes}, iterating from concept to release.
+                                                                                                            \item Produced and optimized \textbf{2+ marketing videos per prototype}, achieving stable CPI and consistent user acquisition metrics.
+                                                                                      \end{itemize}
 
-%=======================
-\section{Recent Projects}
+                                                                                      %=======================
+                                                                                      \section{Recent Projects}
 
-\subsubsection{Color of War \aux{\href{https://apps.apple.com/us/app/color-of-war/id6748607530}{Link \linkicon}}}
-\begin{itemize}
-  \item Turn-based tactical core with \textbf{merge-based unit leveling} and grid combat.
-  \item Implemented \textbf{multi-size enemy support} (\textbf{1x1} to \textbf{3x3}) and \textbf{scalable grid width} (\textbf{3} to \textbf{5} tiles).
-  \item Built editor tooling for \textbf{parametric level balancing} and repeatable test scenarios.
-\end{itemize}
+                                                                                      \subsubsection{Village Survivors \aux{\href{https://apps.apple.com/us/app/villagesurvivors/id6752670025}{Link \linkicon}}}
+                                                                                      \begin{itemize}
+                                                                                                \item Grid based tactical core with merge-based unit leveling and combat.
+                                                                                                      \item Added \textbf{JSON parsing support} and runtime parsing support which enables remote config.
+                                                                                      \end{itemize}
 
-\subsubsection{Loop Army \aux{\href{https://apps.apple.com/us/app/loop-army/id6744885447}{Link \linkicon}}}
-\begin{itemize}
-  \item Designed a \textbf{wave-based looping train spawner} with deterministic sequencing and pooling.
-  \item Delivered end-to-end \textbf{meta upgrade} systems (currencies, progression, unlocks) and \textbf{Google Sheets parsers}.
-  \item Shipped \textbf{editor utilities} to automate data import/validation and speed up iteration.
-\end{itemize}
+                                                                                      \subsubsection{Color of War \aux{\href{https://apps.apple.com/us/app/color-of-war/id6748607530}{Link \linkicon}}}
+                                                                                      \begin{itemize}
+                                                                                                \item Turn-based tactical core with \textbf{merge-based unit leveling} and grid combat.
+                                                                                                      \item Implemented \textbf{multi-size enemy support} (\textbf{1x1} to \textbf{3x3}) and \textbf{scalable grid width} (\textbf{3} to \textbf{5} tiles).
+                                                                                                            \item Built editor tooling for \textbf{parametric level balancing} and repeatable test scenarios.
+                                                                                      \end{itemize}
 
-\subsubsection{Smith Journey \aux{\href{https://apps.apple.com/us/app/smith-journey/id6741895744}{Link \linkicon}}}
-\begin{itemize}
-  \item Implemented \textbf{mining + combat} idle core; added \textbf{5 distinct weapon lines} each with unique skill sets.
-  \item Built \textbf{meta progression} (upgrades, crafting, economy) and \textbf{sheet-driven parsers} for live tuning.
-  \item Added in-editor tools for rapid content authoring and balancing.
-\end{itemize}
+                                                                                      \subsubsection{Loop Army \aux{\href{https://apps.apple.com/us/app/loop-army/id6744885447}{Link \linkicon}}}
+                                                                                      \begin{itemize}
+                                                                                                \item Designed a \textbf{wave-based looping train spawner} with deterministic sequencing and pooling.
+                                                                                                      \item Delivered end-to-end \textbf{meta upgrade} systems (currencies, progression, unlocks) and \textbf{Google Sheets parsers}.
+                                                                                                            \item Shipped \textbf{editor utilities} to automate data import/validation and speed up iteration.
+                                                                                      \end{itemize}
 
-%=======================
-\subsection*{SDKs}
-\begin{itemize}
-  \item \textbf{Unity SDK} — Maintained and extended core features; added \textbf{WebGL build target support} and delivered multiple stable releases.  
-  \aux{\href{https://github.com/Countly/countly-sdk-unity/}{GitHub \linkicon}}
-  \item \textbf{Node.js SDK} — Released new versions with improved APIs, performance fixes, and \textbf{comprehensive Mocha test coverage}.  
-  \aux{\href{https://github.com/Countly/countly-sdk-nodejs}{GitHub \linkicon}}
-  \item \textbf{React Native SDK} — Developed and maintained the bridge layer, enabling seamless cross-platform integration.  
-  \aux{\href{https://github.com/Countly/countly-sdk-react-native-bridge}{GitHub \linkicon}}
-\end{itemize}
-%=======================
-\section{Education}
-\subsection{Yaşar University \rside{Izmir, Turkey}}
-\begin{itemize}
-    \item{Bachelor of Business Administration \rside{Graduated: 2021}}
-\end{itemize}
-%=======================
-\end{document}
+                                                                                      \subsubsection{Smith Journey \aux{\href{https://apps.apple.com/us/app/smith-journey/id6741895744}{Link \linkicon}}}
+                                                                                      \begin{itemize}
+                                                                                                \item Implemented \textbf{mining + combat} idle core; added \textbf{5 distinct weapon lines} each with unique skill sets.
+                                                                                                      \item Built \textbf{meta progression} (upgrades, crafting, economy) and \textbf{sheet-driven parsers} for live tuning.
+                                                                                                            \item Added in-editor tools for rapid content authoring and balancing.
+                                                                                      \end{itemize}
+
+                                                                                      %=======================
+                                                                                      \subsection*{SDKs}
+                                                                                      \begin{itemize}
+                                                                                                \item \textbf{Unity SDK} — Maintained and extended core features; added \textbf{WebGL build target support} and delivered multiple stable releases.  
+                                                                                                      \aux{\href{https://github.com/Countly/countly-sdk-unity/}{GitHub \linkicon}}
+                                                                                                        \item \textbf{Node.js SDK} — Released new versions with improved APIs, updated storage functionality of the SDK, which enables custom storage, performance fixes, and \textbf{comprehensive Mocha test coverage}.  
+                                                                                                              \aux{\href{https://github.com/Countly/countly-sdk-nodejs}{GitHub \linkicon}}
+                                                                                                                \item \textbf{React Native SDK} — Developed and maintained the bridge layer, enabling seamless cross-platform integration.  
+                                                                                                                      \aux{\href{https://github.com/Countly/countly-sdk-react-native-bridge}{GitHub \linkicon}}
+                                                                                      \end{itemize}
+                                                                                      %=======================
+                                                                                      \section{Education}
+                                                                                      \subsection{Yaşar University \rside{Izmir, Turkey}}
+                                                                                      \begin{itemize}
+                                                                                                  \item{Bachelor of Business Administration \rside{Graduated: 2021}}
+                                                                                      \end{itemize}
+                                                                                      %=======================
+                                                                                  \end{document}+
