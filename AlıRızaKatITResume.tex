@@ -1,0 +1,179 @@
+\documentclass[11pt]{article}
+\usepackage[sfdefault,semibold,lf]{FiraSans}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{141E61}
+\newcommand{\linkicon}{
+  \color{gray}{\footnotesize\raisebox{1pt}{\faIcon{external-link-alt}}}
+}
+\setcounter{secnumdepth}{0}
+\pdfgentounicode=1
+
+\usepackage{enumitem}
+\setlist[itemize]{nosep, left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
+
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\midrule}[1]{
+  \leavevmode
+  \xrfill[.5ex]{1pt}[accent]~\so{#1}~\xrfill[.5ex]{1pt}[accent]
+}
+
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*4}{*1}
+\titlespacing{\subsection}{0pt}{*3}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries\scshape}
+
+\newcommand{\aux}[1]{
+  $|$ \space {\normalfont\itshape #1}%
+}
+\newcommand{\rside}[1]{
+  \hfill {\normalfont\color{accent} #1}%
+}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{gray} Ali Rıza Kat -- Page \thepage\ of \pageref*{LastPage}}
+
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+
+\begin{document}
+
+\begin{center}
+  \begin{tabularx}{\textwidth}{Xr}
+    \begin{minipage}[c]{0.7\textwidth}
+      {\fontsize{36}{12} \fontseries{heavy}\selectfont \color{accent} ALI RIZA KAT} \\[0.5em]
+      \href{tel:+905516617781}{{\color{gray}{\faPhone}} +905516617781} \quad
+      \href{mailto:alirizakat.dev@gmail.com}{{\color{gray}{\faEnvelope}} alirizakat.dev@gmail.com} \quad
+      \faMapMarker \ {\color{gray} Istanbul} \\
+      \href{https://github.com/AliRKat}{{\color{gray}{\faGithub}} AliRKat} \quad
+      \href{https://www.linkedin.com/in/alirizakat}{{\color{gray}{\faLinkedin}} alirizakat} \quad
+      \href{https://leetcode.com/u/alirizakat/}{{\color{gray}{\faGlobe}} LeetCode}
+    \end{minipage} &
+    \begin{minipage}[c]{0.25\textwidth}
+      \centering
+      \vspace{-5mm}
+      \includegraphics[width=3cm, height=3cm, keepaspectratio]{photo.jpg}
+    \end{minipage}
+  \end{tabularx}
+\end{center}
+
+%====================================
+\section{Professional Summary}
+
+Software Developer transitioning into IT and Cybersecurity. Experienced with Linux systems, scripting, debugging, and supporting users in technical environments. Currently studying for \textbf{CompTIA A+} and building practical security-focused tools (Python + Bash). Seeking a Technical Support / IT Operations / SysAdmin entry role where I can apply my software background to system troubleshooting, configuration, and problem-solving.
+
+%====================================
+\section{Skills}
+\begin{description}
+    \item[IT \& System Administration] Linux (Arch/Ubuntu), SSH, system logs, service management, package management
+    \item[Networking] Basic LAN/WAN Concepts, TCP/IP, VPN Setup, Cisco Router/Switch Basics, Firewall Fundamentals
+    \item[Scripting] Bash, Python (log parsing, automation)
+    \item[Support] Remote troubleshooting, configuration assistance, environment debugging, documentation
+    \item[Software Background] C\#, Unity, Node.js, C++, Git, CI basics
+    \item[Languages] English (C1), Turkish (Native)
+\end{description}
+
+%====================================
+\section{Experience}
+
+\subsection{Multiplayer / Super Duper Games \rside{Istanbul, Turkey}}
+\subsubsection{Software Engineer \rside{Feb 2025 -- Oct 2025}}
+\begin{itemize}
+  \item Diagnosed and solved environment-related issues across Linux/Windows development setups.
+  \item Built over \textbf{10+ internal tools} (parsers, automation utilities), improving iteration speed.
+  \item Developed a modular Animation Library with editor tooling, enabling fast debugging and reproducibility.
+\end{itemize}
+
+\subsection{Countly \rside{Remote}}
+\subsubsection{SDK Engineer \rside{Sep 2023 -- Nov 2024}}
+\begin{itemize}
+  \item Supported global clients integrating Countly SDKs; joined troubleshooting sessions and helped resolve configuration mismatches and runtime issues.
+  \item Maintained Unity, Node.js, and React Native SDKs; delivered \textbf{8+ releases}.
+  \item Authored and restructured \textbf{15+ technical documents} on setup, debugging, and best practices.
+\end{itemize}
+
+\subsection{Nitrogen Games \rside{Izmir, Turkey}}
+\subsubsection{Game Developer \rside{Nov 2022 -- May 2023}}
+\begin{itemize}
+  \item Diagnosed device compatibility, input, and network issues across mobile environments.
+  \item Developed \textbf{internal tools} improving workflows and reducing iteration time.
+  \item Took over existing projects and stabilized them via debugging and refactoring.
+\end{itemize}
+
+\subsection{Nirah Games  \rside{Izmir, Turkey}}
+\subsubsection{Game Developer \rside{Jan 2021 -- Oct 2022}}
+\begin{itemize}
+  \item Led development of \textbf{Baby Life 3D!} (1M+ downloads).
+  \item Built \textbf{15+ prototypes} end-to-end, handling debugging and optimization.
+  \item Produced and optimized in-game workflows and prototype pipelines.
+\end{itemize}
+
+%====================================
+\section{Recent Projects}
+
+\subsubsection{Log Analyzer Lite (Python)}
+\begin{itemize}
+  \item Parses \texttt{/var/log/auth.log} for failed SSH login attempts.
+  \item Extracts IPs, counts frequency, and outputs CLI/JSON results.
+  \item Demonstrates regex, log analysis, Linux fundamentals, and security basics.
+\end{itemize}
+
+\subsubsection{Village Survivors \aux{\href{https://apps.apple.com/us/app/villagesurvivors/id6752670025}{Link \linkicon}}}
+\begin{itemize}
+  \item Grid-based tactical core with merge-leveling.
+  \item Added runtime JSON parsing for remote config support.
+\end{itemize}
+
+\subsubsection{Color of War \aux{\href{https://apps.apple.com/us/app/color-of-war/id6748607530}{Link \linkicon}}}
+\begin{itemize}
+  \item Implemented multi-size enemy support and scalable grids.
+  \item Built tooling for parametric level balancing and test scenarios.
+\end{itemize}
+
+\subsubsection{Loop Army \aux{\href{https://apps.apple.com/us/app/loop-army/id6744885447}{Link \linkicon}}}
+\begin{itemize}
+  \item Designed wave-based deterministic spawner.
+  \item Delivered meta upgrade systems and Google Sheets parsers.
+\end{itemize}
+
+\subsubsection{Smith Journey \aux{\href{https://apps.apple.com/us/app/smith-journey/id6741895744}{Link \linkicon}}}
+\begin{itemize}
+  \item Implemented mining/combat idle core and meta progression.
+  \item Created editor tooling for rapid content authoring.
+\end{itemize}
+
+%====================================
+\subsection*{SDKs}
+\begin{itemize}
+  \item \textbf{Unity SDK} — Added WebGL support; delivered multiple releases. \aux{\href{https://github.com/Countly/countly-sdk-unity/}{GitHub \linkicon}}
+  \item \textbf{Node.js SDK} — Improved APIs, storage layer, and Mocha test coverage. \aux{\href{https://github.com/Countly/countly-sdk-nodejs}{GitHub \linkicon}}
+  \item \textbf{React Native SDK} — Maintained cross-platform bridge layer. \aux{\href{https://github.com/Countly/countly-sdk-react-native-bridge}{GitHub \linkicon}}
+\end{itemize}
+
+%====================================
+\section{Education}
+\subsection{Yaşar University \rside{Izmir, Turkey}}
+\begin{itemize}
+    \item Bachelor of Business Administration \rside{Graduated: 2021}
+\end{itemize}
+
+\subsection{Certifications}
+\begin{itemize}
+    \item \textbf{CompTIA A+} (In Progress)
+\end{itemize}
+
+\end{document}
